@@ -5,7 +5,7 @@
 Introduction
 ------------
 
-A python that parses boost python and converts it to wikitext
+A python package that parses boost python and converts it to wikitext
 
 
 Home Page & Repository
