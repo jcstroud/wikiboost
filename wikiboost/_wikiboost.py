@@ -1094,7 +1094,7 @@ if __name__ == '__main__':
   # test_retval()
 
   config = {"source_root":
-                "/usr/local/cctbx-svn/sources/cctbx_project"
+                "/usr/local/cctbx-svn/sources/cctbx_project",
             "mtz_filename": "toxd.mtz",
             "pdb_name": '1imh.pdb',
             "require_params": True}

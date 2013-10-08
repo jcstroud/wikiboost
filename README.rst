@@ -29,13 +29,17 @@ Usage consists roughly of
 
 In ``wikiboost-test.py``, step (1) above is accomplished via
 the function ``test-setup()``. As of version 0.1.0, the
-object named ``mtch_indcs`` (of type ``ctbx_miller_ext.match_indices``)
+object named ``mtz_file`` (of type ``iotbx_mtz_ext.object``)
 is created along with many other types of objects. Because the ``__name__``
-of the class of ``mtch_indcs`` has an "ext" in it, the path to
-the module must be explicitly given. Here, the module
-is ``["cctbx", "miller"]``. This module is returned as the second
-element of the return value of ``test-setup()``. The first
-element is the ``mtch_indcs`` object.
+of the class of ``mtz_file`` describes where the class can be
+found in the cctbx sources (``iotbx/mtx``), the path to
+the module must not be explicitly given. Here, the module
+is ``None``. In other cases, the path can be given explicitly
+as a list (e.g. ``["cctbx", "miller"]``).  The module (or ``None``)
+is returned as the second element of the return value of ``test-setup()``.
+
+The first element of the return value of ``test-setup()``
+is the ``mtch_indcs`` object.
 
 The ``wikifiy_all_methods`` function takes three arguments:
 

@@ -4,9 +4,7 @@
 runs the manual tests without the need to build and install
 """
 
-import os
 import sys
-import shutil
 import logging
 
 sys.path.insert(0, "..")
@@ -18,7 +16,7 @@ def test_setup(config):
   from iotbx import mtz, pdb
   from scitbx.array_family import flex
 
-  mtz_name = config['mtz_filename']
+  mtz_filename = config['mtz_filename']
   mtz_file = mtz.object(mtz_filename)
 
   pdb_name = config['pdb_name']
@@ -50,9 +48,10 @@ def test_setup(config):
   mtch_indcs = miller_1.match_indices(miller_2)
   mset = miller.set()
 
-  module = ["cctbx", "miller"]
+  # module = ["cctbx", "miller"]
+  module = None
 
-  return (mtch_indcs, module)
+  return (mtz_file, module)
   
 
 if __name__ == "__main__":
@@ -63,7 +62,7 @@ if __name__ == "__main__":
   logging.info("Running _wikiboost()")
 
   config = {"source_root":
-                "/usr/local/cctbx-svn/sources/cctbx_project"
+                "/usr/local/cctbx-svn/sources/cctbx_project",
             "mtz_filename": "toxd.mtz",
             "pdb_name": '1imh.pdb',
             "require_params": True}
