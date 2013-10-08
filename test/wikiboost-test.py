@@ -70,6 +70,6 @@ if __name__ == "__main__":
 
   boost_object, module = test_setup(config)
   boost_type = type(boost_object)
-  doc = _wikiboost.wikiboost(boost_type, config, module)
+  doc = wikiboost.wikify_all_methods(boost_type, config, module)
 
   print doc

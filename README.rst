@@ -25,7 +25,7 @@ file ``wikiboost-test.py``.
 Usage consists roughly of
 
 1. Construct an object of the class that needs to be documented
-2. Call ``wikiboost.wikify_al_methods()`` on the ``type()`` of that object
+2. Call ``wikiboost.wikify_all_methods()`` on the ``type()`` of that object
 
 In ``wikiboost-test.py``, step (1) above is accomplished via
 the function ``test-setup()``. As of version 0.1.0, the
